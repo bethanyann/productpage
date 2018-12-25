@@ -3,5 +3,121 @@
 html, body{
 	margin: 0; 
 	padding: 0;
+	height: 100%; /* this makes the page full screen*/
 	font-family: Raleway, Helvetica, sans-serif;
+}
+:root {
+
+	--nav-height: 55px;
+}
+
+#header{
+	position: fixed;
+	top: 0; /* top margin edge for a positioned box*/
+	background-color: (255,255,255);
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+
+nav{
+	width: 100%; /*width should be a percentage for responsiveness*/
+ 	height: 55px; /*height should be px. Adjust to your liking*/
+  	background-color: #0b98de;
+  	overflow: hidden;
+ }
+
+nav a:not(:first-child){
+	display: block; /* creates blocks out of the nav bar items to play around with */
+	float: left; /*keeps the nav items going horizontal instead of vertical*/
+	color: white;
+
+	/*box method test aka handicap 
+	background-color: #17b0cf;
+	border: 1px solid #000;*/
+	align-items: center;
+	/*padding out the box*/
+	padding: 20px 10px 10px 10px;
+	width: 5%;
+	height:55px;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav a:first-child{
+	display: block; /* creates blocks out of the nav bar items to play around with */
+	float: left; /*keeps the nav items going horizontal instead of vertical*/
+	color: white;
+	width: 5%;
+	overflow:hidden;
+	height: var(--nav-height);
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 300px;
+
+}
+nav a:hover{
+	background-color: #17b0cf;
+}
+nav a:visited{
+
+}
+nav a img{
+	width:40px; 
+	height:40px;
+}
+
+.main{
+	height: 100%; /* this makes the section full screen */
+	width: auto;
+	margin: 0;
+	margin-top: var(--nav-height);
+	background-color: pink;
+}
+
+#about, #faq, #products, #contact{
+	padding-top: 20px; /*pushes the text down a bit so it doesn't get cut off when navigating to the section */
+}
+
+#about h2{
+	margin-top: var(--nav-height);
+}
+#about iframe{
+	margin: 0 auto; /* centers the iframe because nothing else WORKED */
+}
+
+iframe {
+	display: block;
+	margin 0 auto;
+	/*padding-top: 20px;*/
+}
+
+
+#products
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+#products #product_1, #products #product_2, #products #product_3{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	width: calc(100% / 3);
+}
+
+
+@media only screen and (max-width: 768px){
+	#product_1{
+		width: 100%;
+	}
+	#product_2{
+		width: 100%;
+	}
+	#product_3{
+		width: 100%;
+	}
+
 }
