@@ -73,7 +73,7 @@ nav a img{
 	width: 100%;
 	margin: 0 auto;
 	margin-top: var(--nav-height);
-	background-color: pink;
+	/*background-color: pink;*/
 }
 
 #intro, #about, #faq, #products, #contact{
@@ -107,7 +107,7 @@ iframe {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	background-color: red;
+	/*background-color: red;*/
 }
 
 .product {
