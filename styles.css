@@ -10,7 +10,7 @@ html, body{
 
 	--nav-height: 55px;
 }
-
+/**************************************************HEADER************************************************/
 #header{
 	position: fixed;
 	top: 0; /* top margin edge for a positioned box*/
@@ -20,7 +20,7 @@ html, body{
 	width: 100%;
 }
 
-
+/***********************************************NAVIGATION************************************************/
 nav{
 	width: 100%; /*width should be a percentage for responsiveness*/
  	height: 55px; /*height should be px. Adjust to your liking*/
@@ -67,19 +67,25 @@ nav a img{
 	width:40px; 
 	height:40px;
 }
-
+/**********************************************MAIN SECTION*********************************************/
 .main{
 	height: 100%; /* this makes the section full screen */
-	width: auto;
-	margin: 0;
+	width: 100%;
+	margin: 0 auto;
 	margin-top: var(--nav-height);
 	background-color: pink;
 }
 
-#about, #faq, #products, #contact{
-	padding-top: 20px; /*pushes the text down a bit so it doesn't get cut off when navigating to the section */
+#intro, #about, #faq, #products, #contact{
+	padding-top: 20px; pushes the text down a bit so it doesn't get cut off when navigating to the section */
 }
-
+#intro h1 {
+	text-align: center; 
+}
+.block-text{
+	width: 60%;
+	margin: 0 auto;
+}
 #about h2{
 	margin-top: var(--nav-height);
 }
@@ -93,31 +99,42 @@ iframe {
 	/*padding-top: 20px;*/
 }
 
-
-#products
-{
-	display: flex;
-	justify-content: space-between;
-}
-
-#products #product_1, #products #product_2, #products #product_3{
+#products {
+	width: auto; /* centers the content */
+	margin: 0 auto; /* centers the content */
+	max-width: 1000px; /* keeps product class from stretching across the whole screen */
+	margin-top: 40px;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	background-color: red;
+}
+
+.product {
+	
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 40%;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+/*#products #product_1, #products #product_2, #products #product_3{
+	display: flex;
 	align-items: center;
 	text-align: center;
 	width: calc(100% / 3);
+}*/
+
+@media only screen and (max-width: 600px){
+	.product{
+		width: 100%;
+	}
+
+	.block-text{
+		width: 90%;
+	}
 }
-
-
-@media only screen and (max-width: 768px){
-	#product_1{
-		width: 100%;
-	}
-	#product_2{
-		width: 100%;
-	}
-	#product_3{
-		width: 100%;
-	}
 
 }
